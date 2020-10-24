@@ -1,0 +1,84 @@
+<html>  
+<head> 
+	<link
+  async
+  rel="stylesheet"
+  href="//cdn.jsdelivr.net/npm/semantic-ui@${props.versions.sui}/dist/semantic.min.css"
+/>
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<title> Sign-up Page </title>  
+<style>  
+Body {  
+  font-family: Serif; 
+ background: #74ebd5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to top, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to top, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+	a{
+		color:black;
+	}
+	h1{
+		font-family:serif;
+		font-size:50px;
+	}
+button {  
+        background-color: #e6eeff;  
+        width: 100;  
+        color: black;  
+        padding: 12px;
+	border:black;
+	border-radius: 15px;           
+         }  
+ form {  
+	    /* background-color: white;   */
+        margin: 20px 20px;
+	 border-radius: 15px;     
+	 border:black;
+    }  
+ input[type=text], input[type=password] {  
+        width: 350;  
+        margin: 8px ;  
+        padding: 12px 20px;  
+        display: inline-block;    
+        box-sizing: border-box;
+	 border:black;
+	    border-radius: 10px;
+    }  
+ button:hover {  
+        opacity: 0.8;  
+    }    
+     
+ .container {  
+margin: auto;
+        padding: 50px;  
+max-width: 350px;
+border: 8px solid black;  
+	 border-radius: 15px;     
+align: center;
+         
+    }  
+</style>  
+</head>    
+<body background= "signup.jpg" >    
+    <br><br>  
+	<h1 align="center" style="color:black" class="h1"> <b> <i> Get Out Garbage</i> </b> </h1> <br>
+    <form action="/post" method="POST" class="ui form">
+        <div class="container">
+   <h2 style="color:black" align="center"> <b>  Sign up Form </b> </h2> <br>
+			
+            <label>Username</label>
+            <input type="text" placeholder="Email ID" name="username" required ><br>
+            <label>Password</label>
+            <input pattern=".{8,}" type="password" placeholder="Password" name="password" required title="Minimum 8 characters"><br>
+   <label>Confirm Password</label>
+            <input pattern=".{8,}" type="password" placeholder="Confirm Password" name="password2" required title="Minimum 8 characters"><br>
+			<h4 style="color:red">Your passwords did not match!!</h4>
+            Already registered? 
+   <a href="/login" class="click">Click Here!</a><br><br>
+   <input type="checkbox"  style="color:black"> Remember me    
+ <button class="ui green basic button">Submit</button>
+        </div>  
+    </form>    
+</body>    
+</html>  
